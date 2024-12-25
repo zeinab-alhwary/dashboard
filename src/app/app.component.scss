@@ -1,0 +1,20 @@
+@import '../styles.scss';
+.main-container{
+  background-color: $parent-color;
+  padding: 30px;
+.border-footer{
+  border-top:1px solid $dark-blue;
+  margin-block-start: 20px;
+  padding-block-start: 10px;
+  .text-footer{
+    @include font(500,12px);
+    .anchor{
+      color: $dark-blue;
+    }
+  }
+}
+
+
+
+  }
+

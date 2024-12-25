@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+$dark-blue:#28AAE2;
+$dark:#000;
+$dark-pink:rgba(233, 60, 60, 1);
+$dark-yellow:rgba(235, 163, 54, 1);
+$dark-green:rgba(7, 127, 35, 1);
+$dark-gray:rgba(139, 139, 139, 1);
+$parent-color:#F5F8FD;
+$child-color:#FFF;
+$some-row-color:#FAFAFB;
+$head-table:#EBECED;
+$placeholder-search:rgba(197, 199, 201, 1);
+$text-top-color:rgba(139, 137, 137, 1);
+$border-color:rgba(217, 217, 217, 1);
+
+
+@mixin font($fontWeight,$fontSize){
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+}
+
+body{
+  font-family:"Poppins", serif;
+
+}
+p,h2{
+  margin-block: 0;
+}

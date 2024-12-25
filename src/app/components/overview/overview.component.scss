@@ -1,0 +1,61 @@
+@import '../../../styles.scss';
+.overview-container{
+  display: flex;
+  max-height: 150px;
+  border-radius: 12px;
+  border: 1px solid $border-color;
+  background-color:$child-color;
+.overview-item{
+  display: flex;
+  margin: 10px;
+  padding: 20px 70px 20px 20px;
+  border-right: 1px solid $border-color;
+  gap:20px;
+  align-items: center;
+  &:last-child{
+    border: none;
+  }
+}
+  .voucher{
+    background-color:rgba($color:$dark-blue, $alpha: 0.25);
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+    padding:12px 10px 8px 10px;
+  }
+  .rotate{
+    background-color: rgba($color: $dark-yellow, $alpha: 0.25);
+     border-radius: 50%;
+     max-width: 45px;
+     max-height: 45px;
+     padding:11px 13px 14px 12px;
+  }
+  .hourglass{
+    background-color: rgba($color: $dark-pink, $alpha: 0.25);
+    border-radius: 50%;
+    max-width: 45px;
+    max-height: 45px;
+    padding:12px 12px 13px 13px;
+  }
+  .double-tick{
+    background-color: rgba($color: $dark-green, $alpha: 0.25);
+    border-radius: 50%;
+    max-width: 45px;
+    max-height: 45px;
+    padding:12px 12px 13px 13px;
+  }
+  .data-item{
+    .text{
+      color:$text-top-color;
+       @include font(500,18px);
+       line-height: 27px;
+
+    }
+    .number{
+      color: $dark;
+      @include font(600,28px);
+      line-height: 42px;
+
+    }
+  }
+}

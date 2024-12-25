@@ -1,0 +1,11 @@
+<div class="overview-container">
+  <ng-container *ngFor="let item of overviewData">
+    <div class="overview-item">
+     <img src={{item.image}} alt="voucher" [ngClass]="{'voucher':item.voucher===true,'rotate':item.rotate===true, 'hourglass':item.hourglass===true,'double-tick':item.doubleTick===true}" >
+      <div class="data-item">
+       <p class="text">{{item.text}}</p>
+       <p class="number">{{item.number}}</p>
+      </div>
+      </div>
+  </ng-container>
+</div>

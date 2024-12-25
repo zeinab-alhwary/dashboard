@@ -1,0 +1,124 @@
+@import '../../../styles.scss';
+.tickets-container{
+  background-color:$child-color;
+  margin-block-start: 50px;
+  padding: 30px;
+  position: relative;
+  .header-tickets{
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: 20px;
+    .tickets-title{
+
+    }
+    .search{
+     max-width: 225px;
+     max-height: 40px;
+     padding: 0px 2px 0 10px;
+      border-radius: 6px;
+      border: 1px solid $border-color;
+
+    }
+    &::before{
+      content: url("../../../assets/images/search-icon.svg");
+      // background-image: ;
+      position: absolute;
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      width: 24px;
+      height: 24px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  .table-container{
+    max-height:calc(50vh - 30px);
+    outline: 1px solid $border-color;
+    border-radius: 12px;
+    overflow: overlay;
+
+  .general-table{
+      width: 100%;
+      min-height: 225px;
+      border-collapse: collapse;
+     
+    }
+    .table-header{
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      tr{
+        th{
+          border-inline-end: 1px solid $border-color;
+          text-align: start;
+          padding: 13px;
+          @include font(500,16px)
+      }
+    }
+      background-color:$head-table;
+    }
+    .table-body{
+      @include font(400,16px);
+        tr{
+          
+          .status{
+            padding: 6px 12px;
+            border-radius: 50px;
+            width: fit-content;
+          }
+            .open{
+              background-color: rgba($color: $dark-blue, $alpha: 0.25);
+              color: $dark-blue;
+              
+               
+            }
+            .pending{
+              background-color: rgba($color: $dark-pink, $alpha: 0.25);
+              color: $dark-pink;
+            }
+            .progress{
+              background-color: rgba($color: $dark-yellow, $alpha: 0.25);
+              color: $dark-yellow;
+            }
+            .closed{
+              background-color: rgba($color: $dark-green, $alpha: 0.25);
+              color: $dark-green;
+            }
+          
+          .high{
+            color: $dark-pink;
+          }
+          .low{
+            color: $dark-yellow;
+          }
+          .normal{
+            color: $dark-green;
+          }
+         td:not(.action){
+          padding: 13px;
+          border-inline-end:1px solid $border-color;
+        }
+       
+        .action{
+          display: flex;
+          gap:8px;
+          padding: 13px;
+          .btn-action{
+            border:none;
+            outline: none;
+            padding-inline: 8px;
+            border-radius: 6px;
+            border-inline-end: none;
+          }
+          .btn-eye{
+            background-color: rgba($color: $dark-blue, $alpha: 0.25);
+          }
+          .btn-trash{
+            background-color: rgba($color: $dark-pink, $alpha: 0.25);
+          }
+
+        }
+      }
+    }
+  }
+}
