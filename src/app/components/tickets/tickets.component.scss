@@ -3,7 +3,11 @@
   background-color:$child-color;
   margin-block-start: 50px;
   padding: 30px;
-  position: relative;
+  border-radius: 12px;
+  border: 1px solid $border-color;
+  background-color:$child-color;
+
+  
   .header-tickets{
     display: flex;
     justify-content: space-between;
@@ -11,24 +15,31 @@
     .tickets-title{
 
     }
-    .search{
-     max-width: 225px;
+    .search-container{
+      max-width: 225px;
      max-height: 40px;
-     padding: 0px 2px 0 10px;
-      border-radius: 6px;
-      border: 1px solid $border-color;
+     padding: 6px 7px 6px 30px;
+     border-radius: 6px;
+     border: 1px solid $border-color;
+     position: relative;
+     .search{
+      width: 150px;
+    border: none;
+    outline: $dark-blue;
 
-    }
-    &::before{
-      content: url("../../../assets/images/search-icon.svg");
-      // background-image: ;
-      position: absolute;
-      inset-block-end: 0;
-      inset-inline-start: 0;
-      width: 24px;
-      height: 24px;
-      background-size: cover;
-      background-repeat: no-repeat;
+     }
+     &::before{
+       content: url("../../../assets/images/search-icon.svg");
+       // background-image: ;
+       position: absolute;
+       inset-block-end: 1;
+       inset-inline-start: 0;
+       margin-inline-start: 6px;
+       width: 21px;
+       height: 21px;
+       background-size: cover;
+       background-repeat: no-repeat;
+     }
     }
   }
   .table-container{
@@ -41,7 +52,7 @@
       width: 100%;
       min-height: 225px;
       border-collapse: collapse;
-     
+
     }
     .table-header{
       position: sticky;
@@ -60,7 +71,7 @@
     .table-body{
       @include font(400,16px);
         tr{
-          
+
           .status{
             padding: 6px 12px;
             border-radius: 50px;
@@ -69,22 +80,37 @@
             .open{
               background-color: rgba($color: $dark-blue, $alpha: 0.25);
               color: $dark-blue;
-              
-               
+              &:hover{
+                background-color: $dark-blue;
+                color: $child-color;
+              }
+
             }
             .pending{
               background-color: rgba($color: $dark-pink, $alpha: 0.25);
               color: $dark-pink;
+              &:hover{
+                background-color: $dark-pink;
+                color: $child-color;
+              }
             }
             .progress{
               background-color: rgba($color: $dark-yellow, $alpha: 0.25);
               color: $dark-yellow;
+              &:hover{
+                background-color: $dark-yellow;
+                color: $child-color;
+              }
             }
             .closed{
               background-color: rgba($color: $dark-green, $alpha: 0.25);
               color: $dark-green;
+              &:hover{
+                background-color: $dark-green;
+                color: $child-color;
+              }
             }
-          
+
           .high{
             color: $dark-pink;
           }
@@ -98,24 +124,50 @@
           padding: 13px;
           border-inline-end:1px solid $border-color;
         }
-       
+
         .action{
           display: flex;
           gap:8px;
           padding: 13px;
           .btn-action{
+            display: flex;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            align-items: center;
             border:none;
             outline: none;
-            padding-inline: 8px;
+            padding:4px;
             border-radius: 6px;
-            border-inline-end: none;
+
           }
           .btn-eye{
             background-color: rgba($color: $dark-blue, $alpha: 0.25);
+            &:hover{
+              background-color: $dark-blue;
+              .eye{
+                filter: brightness(0) saturate(100%) invert(99%) sepia(16%) saturate(98%) hue-rotate(160deg) brightness(114%) contrast(96%);
+              }
+            }
+          }
+          .btn-pine{
+            &:hover{
+              background-color: $dark-gray;
+              .pine{
+                filter: brightness(0) saturate(100%) invert(99%) sepia(16%) saturate(98%) hue-rotate(160deg) brightness(114%) contrast(96%);
+              }
+            }
           }
           .btn-trash{
             background-color: rgba($color: $dark-pink, $alpha: 0.25);
+            &:hover{
+              background-color: $dark-pink;
+              .trash{
+                filter: brightness(0) saturate(100%) invert(99%) sepia(16%) saturate(98%) hue-rotate(160deg) brightness(114%) contrast(96%);
+              }
+            }
           }
+          
 
         }
       }

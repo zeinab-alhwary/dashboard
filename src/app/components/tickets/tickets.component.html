@@ -1,11 +1,13 @@
 <div class="tickets-container">
   <div class="header-tickets">
     <h2 class="tickets-title">Tickets</h2>
-    <input type="search" placeholder="Search" class="search" >
+    <div class="search-container">
+      <input type="search" placeholder="Search" class="search" >
+    </div>
   </div>
   <div class="table-container">
-    <table class="general-table  border-table">
-        <thead class="table-header thead-fixed">
+    <table class="general-table  ">
+        <thead class="table-header ">
             <tr>
               <th>Ticket Number</th>
               <th>Date</th>
@@ -22,17 +24,17 @@
               <td>lorem ipsum is simply</td>
 
               <td >
-              <p class="status" [ngClass]="{'open':data.Status.toLocaleLowerCase()==='open','pending':data.Status.toLocaleLowerCase()==='pending','progress':data.Status.toLocaleLowerCase()==='in progress','closed':data.Status.toLocaleLowerCase()==='closed'}"> {{data.Status}}</p> 
+              <p class="status" [ngClass]="{'open':data.Status.toLocaleLowerCase()==='open','pending':data.Status.toLocaleLowerCase()==='pending','progress':data.Status.toLocaleLowerCase()==='in progress','closed':data.Status.toLocaleLowerCase()==='closed'}"> {{data.Status}}</p>
               </td>
               <td [ngClass]="{'high':data.Priority==='High','low':data.Priority==='Low','normal':data.Priority==='Normal'}">{{data.Priority}}</td>
               <td class="action">
-               <button class="btn-eye btn-action"><img src="../assets/images/view 1 1.svg" alt="eye"></button>
-               <button class="btn-pine btn-action"><img src="../assets/images/Edit 1 1.svg" alt="pine"></button>
-               <button class="btn-trash btn-action"> <img src="../assets/images/trash 1.svg" alt="trash"></button>
+               <button class="btn-eye btn-action"><img src="assets/images/view 1 1.svg" alt="eye" class="eye"></button>
+               <button class="btn-pine btn-action"><img src="assets/images/Edit 1 1.svg" alt="pine" class="pine"></button>
+               <button class="btn-trash btn-action"> <img src="assets/images/trash 1.svg" alt="trash" class="trash"></button>
               </td>
             </tr>
         </tbody>
-        
+
     </table>
 </div>
 </div>

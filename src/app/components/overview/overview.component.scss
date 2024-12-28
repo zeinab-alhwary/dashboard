@@ -1,14 +1,15 @@
 @import '../../../styles.scss';
 .overview-container{
   display: flex;
-  max-height: 150px;
+  min-height: 150px;
+  // width: fit-content;
   border-radius: 12px;
   border: 1px solid $border-color;
   background-color:$child-color;
 .overview-item{
   display: flex;
   margin: 10px;
-  padding: 20px 70px 20px 20px;
+  padding: 20px 30px;
   border-right: 1px solid $border-color;
   gap:20px;
   align-items: center;
@@ -16,12 +17,18 @@
     border: none;
   }
 }
+
   .voucher{
     background-color:rgba($color:$dark-blue, $alpha: 0.25);
     border-radius: 50%;
     max-width: 50px;
     max-height: 50px;
     padding:12px 10px 8px 10px;
+    &:hover{
+      // background-color: $dark-blue;
+      //  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7460%) hue-rotate(183deg) brightness(105%) contrast(96%);
+       cursor: pointer;
+    }
   }
   .rotate{
     background-color: rgba($color: $dark-yellow, $alpha: 0.25);
@@ -29,6 +36,9 @@
      max-width: 45px;
      max-height: 45px;
      padding:11px 13px 14px 12px;
+     &:hover{
+      cursor: pointer;
+     }
   }
   .hourglass{
     background-color: rgba($color: $dark-pink, $alpha: 0.25);
@@ -36,6 +46,9 @@
     max-width: 45px;
     max-height: 45px;
     padding:12px 12px 13px 13px;
+    &:hover{
+      cursor: pointer;
+    }
   }
   .double-tick{
     background-color: rgba($color: $dark-green, $alpha: 0.25);
@@ -43,6 +56,9 @@
     max-width: 45px;
     max-height: 45px;
     padding:12px 12px 13px 13px;
+    &:hover{
+      cursor: pointer;
+    }
   }
   .data-item{
     .text{
@@ -57,5 +73,17 @@
       line-height: 42px;
 
     }
+  }
+}
+@media (max-width: 900px){
+  .overview-container{
+    flex-wrap: wrap;
+    margin-block-end: 40px;
+    justify-content: center;
+    .overview-item{
+      border-right: none;
+      border-bottom: 1px solid $border-color;
+    }
+
   }
 }
