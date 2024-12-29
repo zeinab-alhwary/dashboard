@@ -7,7 +7,7 @@
   border: 1px solid $border-color;
   background-color:$child-color;
 
-  
+
   .header-tickets{
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,7 @@
   .table-container{
     max-height:calc(50vh - 30px);
     outline: 1px solid $border-color;
-    border-radius: 12px;
+    border-radius: 6px;
     overflow: overlay;
 
   .general-table{
@@ -167,7 +167,7 @@
               }
             }
           }
-          
+
 
         }
       }
